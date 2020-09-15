@@ -29,6 +29,13 @@ public class AppleTree : MonoBehaviour
         pos.x += speed*Time.deltaTime;
         transform.position=pos;
         //change diretction 
-
+        if(pos.x<-radius)
+        {
+            speed = Mathf.Abs(speed);
+            
+        }else if(pos.x > radius)
+        {
+            speed= -Mathf.Abs(speed);
+        }
     }
 }
