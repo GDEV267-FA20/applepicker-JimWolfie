@@ -32,10 +32,12 @@ public class AppleTree : MonoBehaviour
         if(pos.x<-radius)
         {
             speed = Mathf.Abs(speed);
-            
         }else if(pos.x > radius)
         {
             speed= -Mathf.Abs(speed);
+        }else if (Random.value < directionChangeChance)
+        {
+            speed*=-1;
         }
     }
 }
