@@ -321,6 +321,10 @@ PrefabInstance:
       propertyPath: directionChangeChance
       value: 0.02
       objectReference: {fileID: 0}
+    - target: {fileID: 5376153455322252404, guid: e4bbaca7baa2b4641a3cdbd588c95227, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5376153455322252405, guid: e4bbaca7baa2b4641a3cdbd588c95227, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
