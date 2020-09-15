@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5376153454290194352}
   - component: {fileID: 5376153454290194353}
   - component: {fileID: 5376153454290194354}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Leafs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 5376153454421174406}
   - component: {fileID: 5376153454421174407}
   - component: {fileID: 5376153454421174456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Trunk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -202,7 +202,7 @@ GameObject:
   - component: {fileID: 5376153455322252405}
   - component: {fileID: 5376153455322252404}
   - component: {fileID: 5123113953625551563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
