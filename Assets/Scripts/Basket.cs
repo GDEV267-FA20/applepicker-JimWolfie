@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
+
 
 public class Basket : MonoBehaviour
 {
     BasketMove controls;
+    public TextMeshPro scoreGT;
+
     private void Awake()
     {
         controls = new BasketMove();
@@ -22,7 +26,9 @@ public class Basket : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        scoreGT = scoreGO.GetComponent<TextMeshPro>();
+        scoreGT.text = "0";
     }
 
     // Update is called once per frame
@@ -43,6 +49,9 @@ public class Basket : MonoBehaviour
         if(collidedWith.tag == "Apple")
         {
             Destroy(collidedWith);
+            int score = int.Parse(scoreGT.text);
+            score +=100;
+            scoreGT.text = score.ToString();
         }
     }
 }
