@@ -1,14 +1,14 @@
 {
-    "name": "basketmove",
+    "name": "BasketMove",
     "maps": [
         {
-            "name": "New action map",
-            "id": "95ed9e78-d7f2-4e03-a8fb-6d6b5d9194a1",
+            "name": "Mouse",
+            "id": "51f4e1ac-87a0-457f-89b1-4da6b4813480",
             "actions": [
                 {
-                    "name": "New action",
+                    "name": "Position",
                     "type": "Value",
-                    "id": "7d57cb1b-97b8-492e-86ea-aa8bb6ba7f25",
+                    "id": "2d91371f-df48-431d-b5a3-8ceaa55d175f",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
@@ -17,12 +17,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "7435d525-c4bd-45bf-990d-8865ea491efd",
+                    "id": "c7e84b22-c463-478c-854e-54baba71f4e1",
                     "path": "<Mouse>/position",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "New action",
+                    "action": "Position",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
