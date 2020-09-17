@@ -11,16 +11,19 @@ public class ApplePicker : MonoBehaviour
     public int numberOfBaskets = 3;
     public float basketBottom = -14f;
     public float basketSpacing = 2f;
+    public List<GameObject> basketList;
 
     void Start()
     {
+        basketList = new List<GameObject>();
         for(int i=0; i<numberOfBaskets; i++)
         {
+            
             GameObject tBasketGO = Instantiate<GameObject>(basketPrefab);
             Vector3 pos = Vector3.zero;
             pos.y = basketBottom +( basketSpacing*i);
             tBasketGO.transform.position = pos;
-
+            basketList.Add(tBasketGO);
         }
     }
     public void AppleDestroyed()
@@ -30,6 +33,10 @@ public class ApplePicker : MonoBehaviour
         {
             Destroy(tgo);
         }
+        int basketIndex = basketList.Count-1;
+        GameObject tBasketGO = basketList[basketIndex];
+        basketList.RemoveAt(basketIndex);
+        Destroy(tBasketGO);
     }
     // Update is called once per frame
     void Update()
