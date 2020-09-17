@@ -8,7 +8,7 @@ using TMPro;
 public class Basket : MonoBehaviour
 {
     BasketMove controls;
-    public TextMeshPro scoreGT;
+    public TextMeshProUGUI scoreGT;
 
     private void Awake()
     {
@@ -27,7 +27,7 @@ public class Basket : MonoBehaviour
     void Start()
     {
         GameObject scoreGO = GameObject.Find("ScoreCounter");
-        scoreGT = scoreGO.GetComponent<TextMeshPro>();
+        scoreGT = scoreGO.GetComponent<TextMeshProUGUI>();
         scoreGT.text = "0";
     }
 
@@ -49,9 +49,13 @@ public class Basket : MonoBehaviour
         if(collidedWith.tag == "Apple")
         {
             Destroy(collidedWith);
-            int score = int.Parse(scoreGT.text);
-            score +=100;
-            scoreGT.text = score.ToString();
+            SetCount();
         }
+    }
+    private void SetCount()
+    {
+        int score = int.Parse(scoreGT.text);
+        score +=100;
+        scoreGT.text = score.ToString();
     }
 }
